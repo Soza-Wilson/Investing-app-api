@@ -11,7 +11,7 @@ export interface user {
 }
 
 
-const userModel = sequelize.define("user", {
+const userModel = sequelize.define('user', {
     userId: { type: DataTypes.NUMBER, primaryKey: true, autoIncrement: true },
     givenName: { type: DataTypes.STRING },
     parentName: { type: DataTypes.STRING },
@@ -21,4 +21,4 @@ const userModel = sequelize.define("user", {
 })
 
 
-export default userModel
+export default user

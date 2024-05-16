@@ -9,7 +9,7 @@ export interface business {
     licence: string
 }
 
-const business = sequelize.define("business", {
+const business = sequelize.define('business', {
 
     businessId: { type: DataTypes.NUMBER, primaryKey: true, autoIncrement: true },
     businessName: { type: DataTypes.STRING },

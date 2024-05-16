@@ -9,7 +9,7 @@ export interface marketCap {
 }
 
 
-const marketCap = sequelize.define("businessMarketCap", {
+const marketCap = sequelize.define('businessMarketCap', {
 
     marketCapId: {
 
@@ -18,4 +18,4 @@ const marketCap = sequelize.define("businessMarketCap", {
     marketValue: { type: DataTypes.NUMBER }
 })
 
-export default marketCap;
+export default marketCap; 
