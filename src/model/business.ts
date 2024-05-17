@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../util/database'
 
-export interface business {
+export interface businessInterface {
 
     businessId: Number,
     buisinessName: String,
@@ -9,7 +9,7 @@ export interface business {
     licence: string
 }
 
-const business = sequelize.define('business', {
+const businessModel = sequelize.define('business', {
 
     businessId: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     businessName: { type: DataTypes.STRING },
@@ -18,4 +18,4 @@ const business = sequelize.define('business', {
 })
 
 
-export default business;
+export default businessModel;

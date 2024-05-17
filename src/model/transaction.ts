@@ -2,14 +2,14 @@ import sequelize from "../util/database";
 import { DataType, DataTypes } from "sequelize";
 
 
-export interface transaction {
+export interface transactionInterface {
 
     transactionId: Number,
     transactionType: string,
     timestamp: Number
 }
 
-const transaction = sequelize.define("transaction", {
+const transactionModel = sequelize.define("transaction", {
 
     transactionId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     transactionType: { type: DataTypes.STRING },
@@ -17,4 +17,4 @@ const transaction = sequelize.define("transaction", {
 })
 
 
-export default transaction;
+export default transactionModel;

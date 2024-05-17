@@ -2,7 +2,7 @@ import { DataTypes, Transaction } from 'sequelize'
 import sequelize from '../util/database'
 
 
-export interface payment {
+export interface paymentInterface {
 
     paymentId: Number
     pamentType: String,
@@ -13,7 +13,7 @@ export interface payment {
     timeStamp: String
 }
 
-const payment = sequelize.define(
+const paymentModel = sequelize.define(
     'payment', {
     paymentId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     pamentType: { type: DataTypes.STRING },
@@ -26,4 +26,4 @@ const payment = sequelize.define(
 }
 )
 
-export default payment;
+export default paymentModel;

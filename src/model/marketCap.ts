@@ -2,14 +2,14 @@ import { DataTypes } from 'sequelize'
 import sequelize from '../util/database'
 
 
-export interface marketCap {
+export interface marketCapInterface {
 
     marketCapId :Number,
     marketValue :Number
 }
 
 
-const marketCap = sequelize.define('businessMarketCap', {
+const marketCapModel = sequelize.define('businessMarketCap', {
 
     marketCapId: {
 
@@ -18,4 +18,4 @@ const marketCap = sequelize.define('businessMarketCap', {
     marketValue: { type: DataTypes.INTEGER }
 })
 
-export default marketCap; 
+export default marketCapModel; 
