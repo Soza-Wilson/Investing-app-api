@@ -9,13 +9,20 @@ import bodyParser from 'body-parser';
 
 
 const app = express();
-app.use(bodyParser)
 
 
+(user).hasMany(business);
+(business).belongsTo(user);
+(user).hasMany(transaction);
+(transaction).belongsTo(user);
+(business).hasOne(marketCap);
+(marketCap).belongsTo(business);
+(transaction).hasOne(payment);
+(payment).belongsTo(transaction)
 
 sequelize.sync()
   .then(() => {
-    console.log('User table created successfully');
+    console.log('tables created successfully');
   })
   .catch(err => {
     console.error('Error creating User table:', err);

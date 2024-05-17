@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../util/database'
 
-export interface user {
+export interface userInterface {
 
     userId: Number,
     givenName: String,
@@ -12,13 +12,13 @@ export interface user {
 
 
 const userModel = sequelize.define('user', {
-    userId: { type: DataTypes.NUMBER, primaryKey: true, autoIncrement: true },
-    givenName: { type: DataTypes.STRING },
-    parentName: { type: DataTypes.STRING },
-    email: { type: DataTypes.STRING },
-    picture: { type: DataTypes.STRING }
+    userId: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull:false },
+    givenName: { type: DataTypes.STRING,allowNull:false },
+    parentName: { type: DataTypes.STRING,allowNull:false },
+    email: { type: DataTypes.STRING,allowNull:false },
+    picture: { type: DataTypes.STRING,allowNull:true }
 
 })
 
 
-export default user
+export default userModel

@@ -15,13 +15,13 @@ export interface payment {
 
 const payment = sequelize.define(
     'payment', {
-    paymentId: { type: DataTypes.NUMBER, autoIncrement: true, primaryKey: true },
+    paymentId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     pamentType: { type: DataTypes.STRING },
-    from: { type: DataTypes.NUMBER },
-    to: { type: DataTypes.NUMBER },
-    Transaction: { type: DataTypes.NUMBER },
+    from: { type: DataTypes.INTEGER },
+    to: { type: DataTypes.INTEGER },
+    Transaction: { type: DataTypes.INTEGER },
     paymentStatus: { type: DataTypes.STRING },
-    timeStamp: { type: DataTypes.NUMBER }
+    timeStamp: { type: DataTypes.INTEGER }
 
 }
 )

@@ -11,9 +11,9 @@ export interface transaction {
 
 const transaction = sequelize.define("transaction", {
 
-    transactionId: { type: DataTypes.NUMBER, autoIncrement: true, primaryKey: true },
+    transactionId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
     transactionType: { type: DataTypes.STRING },
-    timestamp: { type: DataTypes.NUMBER }
+    
 })
 
 

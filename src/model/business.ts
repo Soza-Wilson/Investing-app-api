@@ -11,7 +11,7 @@ export interface business {
 
 const business = sequelize.define('business', {
 
-    businessId: { type: DataTypes.NUMBER, primaryKey: true, autoIncrement: true },
+    businessId: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     businessName: { type: DataTypes.STRING },
     description: { type: DataTypes.STRING },
     licence: { type: DataTypes.STRING }

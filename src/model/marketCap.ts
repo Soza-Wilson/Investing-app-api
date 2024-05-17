@@ -13,9 +13,9 @@ const marketCap = sequelize.define('businessMarketCap', {
 
     marketCapId: {
 
-        type: DataTypes.NUMBER, primaryKey: true, autoIncrement: true
+        type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, 
     },
-    marketValue: { type: DataTypes.NUMBER }
+    marketValue: { type: DataTypes.INTEGER }
 })
 
 export default marketCap; 
