@@ -5,10 +5,13 @@ import business from './model/business';
 import marketCap from './model/marketCap';
 import transaction from './model/transaction';
 import payment from './model/payment';
-import bodyParser from 'body-parser';
+
+import userRouter from './routes/userRoutes';
 
 
 const app = express();
+
+app.use(userRouter);
 
 
 (user).hasMany(business);
